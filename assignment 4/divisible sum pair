@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+    int n;
+    int k;
+    cin >> n >> k;
+    vector<int> arr(n);
+    for(int a_i = 0;a_i < n;a_i++){
+       cin >> arr[a_i];
+    }
+    int count = 0;
+    for(int i = 0; i < n; i++) {
+        for(int j = i+1; j < n; j++) {
+            if((arr[i] + arr[j]) % k == 0) {
+                count++;
+            }
+        }
+    }
+    cout<<count<<"\n";
+    return 0;
+}
